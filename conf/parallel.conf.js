@@ -32,6 +32,12 @@ exports.config = {
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
   host: 'hub-cloud.browserstack.com',
+  reporters: ['browserstack'],
+    reporterOptions: {
+        browserstack: {
+            outputDir: './'
+        }
+    },
 
   before: function () {
     var chai = require('chai');
